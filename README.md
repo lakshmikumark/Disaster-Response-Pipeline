@@ -18,7 +18,7 @@ sklearn.metrics
 
 ## The motivation for the project
 
-This project is to build a Natural Language Processing classifier that categorize the messages into 36 different categories.
+This project is to use ETL pipeline and ML pipeline and build a supervised learning model. This model categorizes the messages into 36 different categories.
 
 This project is divided to 3 parts:
 1. Create an ETL Pipeline - to extract, clean and load the data in a SQLite database.
