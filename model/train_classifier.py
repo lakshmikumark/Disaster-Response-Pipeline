@@ -1,4 +1,4 @@
- ## import libraries
+# import libraries
 import pandas as pd
 import numpy as np
 import os
@@ -79,13 +79,11 @@ def build_model():
     pipeline = Pipeline([
                         ('vect', CountVectorizer(tokenizer=tokenize)),
                         ('tfidf', TfidfTransformer()),
-                        ('clf' , MultiOutputClassifier(RandomForestClassifier()))
+                        ('clf' , MultiOutputClassifier(RandomForestClassifier(n_estimators=10)))
                         ])
     ## selected 20 and 50 trees to speed up the training process    
     parameters = {'clf__estimator__n_estimators':[20,50],
                   'clf__estimator__min_samples_split':[5,10]
-                  ## 'clf__estimator__criterion':['gini','entropy'],
-                  ## 'clf__estimator__max_features':['auto','log2']
                  }
         
     cv = GridSearchCV(pipeline, param_grid = parameters , n_jobs = 4 ,cv=3)  
