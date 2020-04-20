@@ -1,4 +1,5 @@
 # Disaster-Response-Pipeline
+Classifying numerous messages during a disaster, so that the help would reach the needy quickly and accurately.
 
 ## The libraries used:
 Pandas,
