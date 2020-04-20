@@ -28,6 +28,13 @@ This project is divided to 3 parts:
 
 ## The files in the repository
 
+The repository contains the following folders and files:
+
+data folder: This folder contains csv files, process_data python script, which reads the data from csv files and processes it (ETL pipeline), and the DisasterResponse database created by the scipt.
+
+model folder: This folder contains Machine Learning pipeline, which includes the python script train_classifier.py.
+
+app folder: This folder contains web app using a python script run.py and a template folder, which contains two html pages - master.html and go.html.
 
 ## Instructions
 
