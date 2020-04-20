@@ -32,7 +32,7 @@ def tokenize(text):
     return clean_tokens
 
 # load data
-engine = create_engine('sqlite:///../data/DisasterMessages.db')
+engine = create_engine('sqlite:///../data/DisasterResponse.db')
 df = pd.read_sql_table('df', engine)
 
 # load model
@@ -45,7 +45,6 @@ model = joblib.load("../models/classifier.pkl")
 def index():
     
     # extract data needed for visuals
-    
     genre_counts = df.groupby('genre').count()['message']
     genre_names = list(genre_counts.index)
     
